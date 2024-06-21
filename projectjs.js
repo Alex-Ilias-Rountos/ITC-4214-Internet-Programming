@@ -7,6 +7,18 @@ function foo(){
 
 
 
+
+
+
+//make it so buttons dont call functions if not all form fields are filled.
+
+
+
+
+
+
+
+
 //Contact Us page JS
 
 function ContactPopup(){
@@ -16,6 +28,12 @@ function ContactPopup(){
    }
 
 
+function ContactPopup2(){
+   $("#contactForm").submit(function(){
+    alert("you are submitting" + $(this).serialize());
+  });
+
+}
 
 
 
