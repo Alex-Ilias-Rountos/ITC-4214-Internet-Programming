@@ -1,15 +1,8 @@
 
-function foo(){
-   
- window.alert("Button Pressed");
-
-}
+//function foo(){ window.alert("Button Pressed");} test
 
 
-
-
-
-//Contact Us page JS
+//Contact Us page JS --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 $("#contact").on("submit", function(e){    //e references the event object
@@ -38,12 +31,12 @@ $("#contact").on("submit", function(e){    //e references the event object
 
 
 
-//Dark Mode JS
+//Dark Mode JS --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 $(document).ready(function() {
   $('#DMbutton').click(function() {
       $('body').toggleClass('dark-mode');
-      $('header, main, footer, nav a').toggleClass('dark-mode');
+      $('header, main, footer, nav a').toggleClass('dark-mode');             //adds the dark-mode class to h/m/f/nav a. The class is formatted in the css file.
       //alert("dark mode button pressed");    //test line
   });
 });
@@ -55,7 +48,7 @@ $(document).ready(function() {
 
 
 
-//Homepage JS
+//Homepage JS --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //Table rows from the form
 
@@ -85,6 +78,60 @@ $('#mainform').on('submit', function(e) {
 })
 
 
-//Sorting
 
-//Deleting
+
+//Searching --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+$('#filtering').on('click', function() {
+  alert("filtering for: "+ $("#searchtext").val());
+  
+
+  $('table tbody').find('tr').hide();                              // Hides all rows so the table appears empty
+
+
+  $('td').each(function() {                                       // Should check all cells one by one for if they contain the text and then show the entire parent row.
+    if (this.textContent.includes($("#searchtext").val())) {      // Now the table is populated only with rows that contain my searchetext.    
+      $(this).parent().show();                                    
+    }                                                             
+  });
+
+  //find a way to reset the input field to its placeholder text
+
+  //  By experimenting I initially landed on the exact opposite result. The function below would hide all the rows that contained my text.
+  //  It took me way too long to realize that since I had a way to target rows I could just hide everything and change my function from .hide() to .show().
+
+  //  $('td').each(function() {                                       
+  //    if (this.textContent.includes($("#searchtext").val())) {          
+  //      $(this).parent().hide();                                    
+  //    }                 
+
+
+})
+
+
+$('#filterreset').on('click', function() {
+  $('table tbody').find('tr:hidden').show();
+  ('#searchtext').reset();
+})
+
+
+
+
+//Deleting --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+$('#deleting').on('click', function() {                              //shamlessly stealing from my own work on the search code as it lets me target multiple rows at once
+  alert("deleting rows that contain: "+ $("#deletetext").val());    //and feels like a perfect fit for this functionality
+  
+
+  $('td').each(function() {                                 
+    if (this.textContent.includes($("#deletetext").val())) {          
+      $(this).parent().remove();                                    
+    }
+  });
+
+})
+
+//find a way to reset the input field to its placeholder text
+
+
+//Sorting --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -4,7 +4,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">    <!-- for proper mobile rendering and touch zooming -->
         <meta charset="UTF-8">
-        <title>Shopping List?</title>                                           <!-- fix alignment -->
+        <title>Shopping List</title>                                           <!-- fix alignment -->
         <link rel="stylesheet" href="projectcss.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -12,77 +12,77 @@
 
 
 
+    <div class="flex-wrapper">
+
+        <body>
 
 
-    <body>
 
+            <header class="sticky-header bg-secondary">
+                <nav class="navbar container navbar-expand-lg navbar-fixed-top navbar-dark">
+                    <p class="navbar-brand align-text-bottom" href="homepage.html">Shopping List</a>
 
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="homepage.html">Homepage</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact_us.html">ContactUs</a></li>
+                        </ul>
 
-        <header class="sticky-header bg-secondary">
-            <nav class="navbar container navbar-expand-lg navbar-fixed-top navbar-dark">
-                <p class="navbar-brand align-text-bottom" href="homepage.html">Shopping List?</a>
+                    <button id="DMbutton" class="btn btn-secondary ms-auto">Toggle Dark Mode</button>
+                </nav>
+            </header>
 
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="homepage.html">Homepage</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact_us.html">ContactUs</a></li>
-                    </ul>
+            
 
-                <button id="DMbutton" class="btn btn-secondary ms-auto">Toggle Dark Mode</button>
-            </nav>
-        </header>
+            <form id="contact" class="container-fluid">
+                <div class="form-group"><input type="text" id="contact_Username" class="form-control" placeholder="Username" required=""></div>
+                <div class="form-group"><input type="email" id="contact_Email" class="form-control" placeholder="Email" required=""></div>
+                <div class="form-group"><input type="tel" id="contact_PhoneNumber" class="form-control" placeholder="PhoneNumber" required=""></div>
+                <div class="form-group"><textarea id="contact_Message" class="form-control" rows="7" placeholder="Message" required=""></textarea></div>
+                <button type="submit" class="btn btn-primary">Submit</button>   <!-- onclick="return ContactPopup();" test inside button attributes --> 
+            </form>
+
 
         
 
-        <form id="contact" class="container-fluid">
-            <div class="form-group"><input type="text" id="contact_Username" class="form-control" placeholder="Username" required=""></div>
-            <div class="form-group"><input type="email" id="contact_Email" class="form-control" placeholder="Email" required=""></div>
-            <div class="form-group"><input type="tel" id="contact_PhoneNumber" class="form-control" placeholder="PhoneNumber" required=""></div>
-            <div class="form-group"><textarea id="contact_Message" class="form-control" rows="7" placeholder="Message" required=""></textarea></div>
-            <button type="submit" class="btn btn-primary">Submit</button>   <!-- onclick="return ContactPopup();" test inside button attributes --> 
-        </form>
-
-
-    
 
 
 
 
 
 
-
-        <footer class="sticky-footer fixed-bottom text-center bg-dark">         <!-- won't appear without fixed-bottom -->
-            <p>
-                <p style="color:rgb(185, 173, 173)">
-                    Add copyright stuff&nbsp;&nbsp;&nbsp;
-                    <img src="https://iconape.com/wp-content/files/sh/336155/png/logo.png" alt="Logo" id = "logo">
+            <footer class="footer text-center bg-dark">         
+                <p>
+                    <p style="color:rgb(185, 173, 173)">
+                        &copy; 2024 Rountos I.A.&nbsp;&nbsp;&nbsp;
+                        <img src="https://iconape.com/wp-content/files/sh/336155/png/logo.png" alt="Logo" id = "logo">
+                    </p>
+                    <ul>
+                        <a href="https://www.facebook.com/" target="self">Facebook</a>&nbsp;&nbsp;
+                        <a href="https://www.google.com/" target="self">Twitter</a>&nbsp;&nbsp;
+                        <a href="https://ko-fi.com/" target="_self">Support Us</a>&nbsp;&nbsp;          
+                        <a href="https://www.google.com/" target="_self">Receive News</a>
+                    </ul>
                 </p>
-                <ul>
-                    <a href="https://www.google.com/" target="self">Social 1</a>&nbsp;&nbsp;
-                    <a href="https://www.google.com/" target="self">Social 2</a>&nbsp;&nbsp;
-                    <a href="https://ko-fi.com/" target="_self">Support Us</a>&nbsp;&nbsp;          
-                    <a href="https://www.google.com/" target="_self">Receive News</a>
-                </ul>
-            </p>
-        </footer>
+            </footer>
 
 
-        <!-- EXTERNAL JS NEEDS TO GO AT THE END OF THE BODY SO IT IS CALLED AFTET THE HTML ELEMENTS ARE RENDERED -->
-        <!-- defer attribute added in the homepage and about us page implementations as I dislike js being at the end aesthetically.-->
-        <!-- In this page I will keep it at the bottom as a reminder of a lesson learned.-->
+            <!-- EXTERNAL JS NEEDS TO GO AT THE END OF THE BODY SO IT IS CALLED AFTET THE HTML ELEMENTS ARE RENDERED -->
+            <!-- defer attribute added in the homepage and about us page implementations as I dislike js being at the end aesthetically.-->
+            <!-- In this page I will keep it at the bottom as a reminder of a lesson learned.-->
 
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>   
-        <script src="projectjs.js"></script>                                                                                       
-    
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>   
+            <script src="projectjs.js"></script>                                                                                       
+        
 
-    </body>
+        </body>
 
 
 
 
 
-    
-
+        
+    </div>
 
 
 

@@ -4,7 +4,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">    <!-- for proper mobile rendering and touch zooming -->
         <meta charset="UTF-8">
-        <title>Shopping List?</title>                                           <!-- fix alignment -->
+        <title>Shopping List</title>                                           <!-- fix alignment -->
         <link rel="stylesheet" href="projectcss.css">
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>   
         <script src="projectjs.js" defer></script>
@@ -14,61 +14,102 @@
 
 
 
+    <div class="flex-wrapper">
 
-
-    <body>
-
-
-
-        <header class="sticky-header bg-secondary">
-            <nav class="navbar container navbar-expand-lg navbar-fixed-top navbar-dark">
-                <p class="navbar-brand align-text-bottom" href="homepage.html">Shopping List?</a>
-
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="homepage.html">Homepage</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact_us.html">ContactUs</a></li>
-                    </ul>
-
-                <button id="DMbutton" class="btn btn-secondary ms-auto">Toggle Dark Mode</button>
-            </nav>
-        </header>
+        <body>
 
 
 
+            <header class="sticky-header bg-secondary">
+                <nav class="navbar container navbar-expand-lg navbar-fixed-top navbar-dark">
+                    <p class="navbar-brand align-text-bottom" href="homepage.html">Shopping List</a>
+
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="homepage.html">Homepage</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact_us.html">ContactUs</a></li>
+                        </ul>
+
+                    <button id="DMbutton" class="btn btn-secondary ms-auto">Toggle Dark Mode</button>
+                </nav>
+            </header>
 
 
-   
-
-        <div id="carousel1" class="carousel slide">
-
-            <div class="carousel-inner">
-
-                <div class="carousel-item active">
-                    <img src="https://i.ytimg.com/vi/Vn_bR1AlV-s/maxresdefault.jpg" class="d-block w-100" alt="slide 1">
+            <!-- Code based on bootstrap 5 documentation. https://getbootstrap.com/docs/5.0/components/card/-->
+            <!-- To be honest I have no idea how to incoroprate this component design wise as there is too little per card. Maybe combining all 3 into 1 would look nicer -->
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                <div class="card h-100">
+                    <img src="images/istockphoto-1284969926-612x612.jpg" width="60" height="200" class="card-img-top" alt="Blue background">
+                    <div class="card-body">
+                    <h5 class="card-title">Rountos Ilias Alexandros</h5>
+                    <p class="card-text">Vice President</p>
+                    </div>
+                    <div class="card-footer">
+                    <small class="text-muted">Name card</small>
+                    </div>
                 </div>
-
-                <div class="carousel-item">
-                    <img src="https://24slides.com/templates/assets/templates-previews/LsgKfgKjcRVhnSEPIraZ3p676sNTYi2wMyvtD4J4.jpg" class="d-block w-100" alt="slide 2">
                 </div>
-
-                <div class="carousel-item">
-                    <img src="https://24slides.com/templates/assets/templates-previews/GNzYhvxstkTxH3XSnVWbjQWmAwPHWzIuJSrb0ocJ.png" class="d-block w-100" alt="slide 3">
+                <div class="col">
+                <div class="card h-100">
+                    <img src="images/istockphoto-1284969926-612x612.jpg" width="60" height="200" class="card-img-top" alt="Blue background">
+                    <figure class="avatar">
+                        <img src="images/4035892-200.png" width="120" height="120"  alt="avatar picture" class="avatarpic">
+                    </figure>
+                    <div class="card-body">
+                
+                    </div>
+                    <div class="card-footer">
+                    <small class="text-muted">Avatar card</small>
+                    </div>
                 </div>
-
+                </div>
+                <div class="col">
+                <div class="card h-100">
+                    <img src="images/istockphoto-1284969926-612x612.jpg" width="60" height="200" class="card-img-top" alt="Blue background">
+                    <div class="card-body">
+                    <h5 class="card-title">MyShoppingList.com</h5>
+                    <p class="card-text">A site intended to make shopping trips easier. <br> Tel: 000-000-0000 <br> Email: xxxxxxxxx@gmail.com 
+                    </p>
+                    </div>
+                    <div class="card-footer">
+                    <small class="text-muted">Info Card</small>
+                    </div>
+                </div>
+                </div>
             </div>
 
-                <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
+    
 
-                <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-                
-        </div>
+            <div id="carousel1" class="carousel slide">
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <img src="images/fruits.jpg" class="d-block w-100" alt="slide 1">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="images/snacks.jpg" class="d-block w-100" alt="slide 2">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="images/wine.jpg" class="d-block w-100" alt="slide 3">
+                    </div>
+
+                </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                    </button>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                    </button>
+                    
+            </div>
 
 
 
@@ -76,26 +117,26 @@
 
 
 
-        <footer class="sticky-footer fixed-bottom text-center bg-dark">         <!-- won't appear without fixed-bottom -->
-            <p>
-                <p style="color:rgb(185, 173, 173)">
-                    Add copyright stuff&nbsp;&nbsp;&nbsp;
-                    <img src="https://iconape.com/wp-content/files/sh/336155/png/logo.png" alt="Logo" id = "logo">
+            <footer class="footer text-center bg-dark">       
+                <p>
+                    <p style="color:rgb(185, 173, 173)">
+                        &copy; 2024 Rountos I.A.&nbsp;&nbsp;&nbsp;
+                        <img src="https://iconape.com/wp-content/files/sh/336155/png/logo.png" alt="Logo" id = "logo">
+                    </p>
+                    <ul>
+                        <a href="https://www.facebook.com/" target="self">Facebook</a>&nbsp;&nbsp;
+                        <a href="https://www.google.com/" target="self">Twitter</a>&nbsp;&nbsp;
+                        <a href="https://ko-fi.com/" target="_self">Support Us</a>&nbsp;&nbsp;                   
+                        <a href="https://www.google.com/" target="_self">Receive News</a>
+                    </ul>
                 </p>
-                <ul>
-                    <a href="https://www.google.com/" target="self">Social 1</a>&nbsp;&nbsp;
-                    <a href="https://www.google.com/" target="self">Social 2</a>&nbsp;&nbsp;
-                    <a href="https://ko-fi.com/" target="_self">Support Us</a>&nbsp;&nbsp;                   
-                    <a href="https://www.google.com/" target="_self">Receive News</a>
-                </ul>
-            </p>
-        </footer>
+            </footer>
 
 
 
-    </body>
+        </body>
 
 
-
+    </div>
 
 </html>

@@ -4,7 +4,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">    <!-- for proper mobile rendering and touch zooming -->
         <meta charset="UTF-8">
-        <title>Shopping List?</title>                                           <!-- fix alignment           decide on final name -->
+        <title>Shopping List</title>                                           <!-- fix alignment           decide on final name -->
         <link rel="stylesheet" href="projectcss.css">
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  
         <script src="projectjs.js" defer></script>
@@ -17,87 +17,102 @@
 
 
 
+    <div class="flex-wrapper">
+        <body>
 
-    <body>
+
+
+            <header class="sticky-header bg-secondary">
+                <nav class="navbar container navbar-expand-lg navbar-fixed-top navbar-dark">
+                    <p class="navbar-brand align-text-bottom" href="homepage.html">Shopping List</a>
+
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="homepage.html">Homepage</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact_us.html">ContactUs</a></li>
+                        </ul>
+
+                    <button id="DMbutton" class="btn btn-secondary ms-auto">Toggle Dark Mode</button>
+                </nav>
+            </header>
 
 
 
-        <header class="sticky-header bg-secondary">
-            <nav class="navbar container navbar-expand-lg navbar-fixed-top navbar-dark">
-                <p class="navbar-brand align-text-bottom" href="homepage.html">Shopping List?</a>
 
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="homepage.html">Homepage</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact_us.html">ContactUs</a></li>
+
+            <div class="container-fluid" id="maintable">
+                <h1 class="text-center" id="tableheader">Shopping List</h1>
+
+                <form id="mainform">
+
+                    <div class="form-group">
+                        <input type="text" id="formfield1" class="form-control" placeholder="Item?" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="formfield2" class="form-control" placeholder="Number?" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="formfield3" class="form-control" placeholder="Priority?" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Add to Table</button>
+
+                    
+                </form>
+
+                <br>
+
+                <input type="text" id="searchtext" class="form-control" placeholder="search text (optional)">
+                <button class="btn btn-primary" id="filtering">Filter</button>
+                <button class="btn btn-primary" id="filterreset">Reset Filter</button>
+
+
+                <p><br></p>
+
+                <input type="text" id="deletetext" class="form-control" placeholder="Delete rows that contain:">
+                <button class="btn btn-danger" id="deleting">Delete</button>
+
+                <p><br></p>
+
+
+                <table class="table table-bordered" id="table1">
+                    <thead>
+                        
+                        <tr>
+                            <th>Items<button id="sort1" class="btn btn-link">Sort ↑↓</button></th>
+                            <th>Number<button id="sort2" class="btn btn-link">Sort ↑↓</button></th>                        
+                            <th>Priority<button id="sort3" class="btn btn-link">Sort ↑↓</button></th>
+                        </tr>
+                    </thead>
+                    <tbody id="body1"></tbody>
+                    <tfoot></tfoot>
+                </table>
+            </div>
+
+
+
+
+
+            <footer class="footer text-center bg-dark">       
+                <p>
+                    <p style="color:rgb(185, 173, 173)">
+                        &copy; 2024 Rountos I.A.&nbsp;&nbsp;&nbsp;
+                        <img src="https://iconape.com/wp-content/files/sh/336155/png/logo.png" alt="Logo" id = "logo">
+                    </p>
+                    <ul>
+                        <a href="https://www.facebook.com/" target="self">Facebook</a>&nbsp;&nbsp;
+                        <a href="https://www.google.com/" target="self">Twitter</a>&nbsp;&nbsp;
+                        <a href="https://ko-fi.com/" target="_self">Support Us</a>&nbsp;&nbsp;                   
+                        <a href="https://www.google.com/" target="_self">Receive News</a>
                     </ul>
-
-                <button id="DMbutton" class="btn btn-secondary ms-auto">Toggle Dark Mode</button>
-            </nav>
-        </header>
-
-
-
-
-
-        <div class="container-fluid" id="maintable">
-            <h1 class="text-center" id="tableheader">Shopping List?</h1>
-
-            <form id="mainform">
-
-                <div class="form-group">
-                    <input type="text" id="formfield1" class="form-control" placeholder="Item?" required>
-                </div>
-
-                <div class="form-group">
-                    <input type="text" id="formfield2" class="form-control" placeholder="Number?" required>
-                </div>
-
-                <div class="form-group">
-                    <input type="text" id="formfield3" class="form-control" placeholder="Priority?" required>
-                </div>
-
-                <button type="submit" class="btn btn-primary">Add to Table</button>
-            </form>
-
-
-
-
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>Item?<button id="sort1" class="btn btn-link">Sort ↑↓</button></th>
-                        <th>Number?<button id="sort2" class="btn btn-link">Sort ↑↓</button></th>                            <!-- allign text + sort in middle here -->
-                        <th>Priority?<button id="sort3" class="btn btn-link">Sort ↑↓</button></th>
-                        <th>"remove entry" button</th>                                                                                 <!-- remove borders, make sure button is alligned properly -->
-                    </tr>
-                </thead>
-                <tbody id="body1"></tbody>
-                <tfoot></tfoot>
-            </table>
-        </div>
-
-
-
-
-
-        <footer class="sticky-footer fixed-bottom text-center bg-dark">         <!-- won't appear without fixed-bottom -->
-            <p>
-                <p style="color:rgb(185, 173, 173)">
-                    Add copyright stuff&nbsp;&nbsp;&nbsp;
-                    <img src="https://iconape.com/wp-content/files/sh/336155/png/logo.png" alt="Logo" id = "logo">
                 </p>
-                <ul>
-                    <a href="https://www.google.com/" target="self">Social 1</a>&nbsp;&nbsp;
-                    <a href="https://www.google.com/" target="self">Social 2</a>&nbsp;&nbsp;
-                    <a href="https://ko-fi.com/" target="_self">Support Us</a>&nbsp;&nbsp;                   
-                    <a href="https://www.google.com/" target="_self">Receive News</a>
-                </ul>
-            </p>
-        </footer>
+            </footer>
 
 
 
-    </body>
+        </body>
+    </div>
 
 </html>
