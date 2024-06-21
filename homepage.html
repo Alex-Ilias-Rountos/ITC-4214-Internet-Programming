@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html class="home" lang="en" dir="ltr">
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">    <!-- for proper mobile rendering and touch zooming -->
+        <meta charset="UTF-8">
+        <title>Shopping List?</title>                                           <!-- fix alignment -->
+        <link rel="stylesheet" href="projectcss.css">
+        <script src="projectjs.js"></script>
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+
+    <!-- is having 2x rel=stylesheet ok? -->
+
+
+
+
+
+    <body>
+
+
+
+        <header class="sticky-header bg-secondary">
+            <nav class="navbar container navbar-expand-lg navbar-fixed-top navbar-dark">
+                <p class="navbar-brand align-text-bottom" href="homepage.html">Shopping List?</a>
+
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="homepage.html">Homepage</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact_us.html">ContactUs</a></li>
+                    </ul>
+
+                <button id="DM button" class="btn btn-secondary ms-auto">Toggle Dark Mode</button>
+            </nav>
+        </header>
+
+
+
+
+
+        <div class="container-fluid" id="maintable">
+            <h1 class="text-center" id="tableheader">Shopping List?</h1>
+
+            <form id="mainform">
+
+                <div class="form-group">
+                    <input type="text" id="formfield1" class="form-control" placeholder="Item?" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="formfield2" class="form-control" placeholder="Number?" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="formfield3" class="form-control" placeholder="Priority?" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary" onclick="return foo();">Add to List</button>
+            </form>
+
+
+
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Item?<button id="sort1" class="btn btn-link">Sort ↑↓</button></th>
+                        <th>Number?<button id="sort2" class="btn btn-link">Sort ↑↓</button></th>                            <!-- allign text + sort in middle here -->
+                        <th>Priority?<button id="sort3" class="btn btn-link">Sort ↑↓</button></th>
+                        <th>"remove entry" button</th>                                                                                 <!-- remove borders, make sure button is alligned properly -->
+                    </tr>
+                </thead>
+                <tbody></tbody>
+                <tfoot></tfoot>
+            </table>
+        </div>
+
+
+
+
+
+        <footer class="sticky-footer fixed-bottom text-center bg-dark">         <!-- won't appear without fixed-bottom -->
+            <p>
+                <p style="color:rgb(185, 173, 173)">
+                    Add copyright stuff&nbsp;&nbsp;&nbsp;
+                    <img src="https://iconape.com/wp-content/files/sh/336155/png/logo.png" alt="Logo" id = "logo">
+                </p>
+                <ul>
+                    <a href="https://www.google.com/" target="self">Social 1</a>&nbsp;&nbsp;
+                    <a href="https://www.google.com/" target="self">Social 2</a>&nbsp;&nbsp;
+                    <a href="https://ko-fi.com/" target="_self">Support Us</a>&nbsp;&nbsp;                     <!-- ask how to add space between these -->
+                    <a href="https://www.google.com/" target="_self">Receive News</a>
+                </ul>
+            </p>
+        </footer>
+
+
+
+    </body>
+
+</html>
