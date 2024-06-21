@@ -43,9 +43,12 @@ nav.dark-mode a {
 
 
 .carousel {
+  position: absolute;
   width: 60%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 1%;
+  margin-top: 2%;
+  /*margin-bottom: 25px;
+  padding-bottom: 10%;    still floats under the footer when the window becomes very small, unsure how to fix without changing the footer style entirely.*/ 
 }
 
